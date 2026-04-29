@@ -1,14 +1,19 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 export default function Home() {
+  const [mounted, setMounted] = useState(false);
   const [company, setCompany] = useState("Example Business Ltd");
   const [industry, setIndustry] = useState("Retail / Services");
   const [website, setWebsite] = useState("https://examplebusiness.com");
   const [staff, setStaff] = useState(12);
   const [pain, setPain] = useState("Too much manual admin, slow customer replies, inconsistent marketing");
   const [reportReady, setReportReady] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const score = useMemo(() => {
     const base = 46;
@@ -36,8 +41,12 @@ export default function Home() {
     ["Finance", "Invoice, expense and reporting assistant", "Medium", "Fewer manual errors"]
   ];
 
+  if (!mounted) {
+    return <div style={{ minHeight: "100vh", background: "#ffffff" }} />;
+  }
+
   return (
-    <div style={page}>
+    <div style={page} suppressHydrationWarning>
       <main style={container}>
         <nav style={nav}>
           <div style={brand}><span style={logo}>AI</span> Launchpad</div>
