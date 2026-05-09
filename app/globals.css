@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #050816;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.tag {
+  color: #7dd3fc;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  max-width: 700px;
+  margin: auto;
+  color: #d1d5db;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.primaryBtn,
+.secondaryBtn,
+button {
+  padding: 0.9rem 1.4rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.primaryBtn,
+button {
+  background: #38bdf8;
+  color: black;
+}
+
+.secondaryBtn {
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+}
+
+.gridSection,
+.articleGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.card,
+.articleCard,
+.newsletter,
+.adBlock {
+  background: #111827;
+  padding: 1.5rem;
+  border-radius: 16px;
+}
+
+.card h2,
+.articleCard h3 {
+  margin-bottom: 1rem;
+}
+
+.adBlock {
+  margin-top: 3rem;
+  text-align: center;
+  border: 1px dashed #38bdf8;
+}
+
+.articlesSection {
+  margin-top: 4rem;
+}
+
+.newsletter {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.newsletterForm input {
+  padding: 1rem;
+  min-width: 280px;
+  border-radius: 10px;
+  border: none;
+}
